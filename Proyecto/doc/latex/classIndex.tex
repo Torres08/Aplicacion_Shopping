@@ -1,0 +1,263 @@
+\hypertarget{classIndex}{}\doxysection{Index Class Reference}
+\label{classIndex}\index{Index@{Index}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIndex_a0f3ab2b3c2f7c2304e2881204cfb7b42}{Index}} (int on\+Brand=0)
+\begin{DoxyCompactList}\small\item\em Constructor defining the type of index to be created. Depending on the type, the values of the pairs will be set using users or brands. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIndex_a193d79170a1effb5d401a627249e52d9}{Index}} (const \mbox{\hyperlink{classIndex}{Index}} \&orig)
+\begin{DoxyCompactList}\small\item\em Copy constructor, a new object is created from the parameter object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIndex_a1d7170f9bdadd16f8db0b0905fdc1323}{size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the size of the index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classIndex_a10fb1c71d064c2b3118d4a11a3adda05}{is\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Detects whether an index is empty or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIndex_a3b2c7f89af619efa0857084100fff2f8}{build}} (const \mbox{\hyperlink{classEventSet}{Event\+Set}} \&ev\+Set, int on\+Brand)
+\begin{DoxyCompactList}\small\item\em Build the index using the Brand o the user\+ID as searching key according to the on\+Brand value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIndex_a060c365a178c347c5f97ccc89688e672}{get\+I\+On\+Which}} () const
+\begin{DoxyCompactList}\small\item\em Informs on which field is mounted the index, 1 Brand 0 user\+ID. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classPair}{Pair}} \& \mbox{\hyperlink{classIndex_a4b4100575cd7c41b532aaee42b27458a}{at}} (int pos) const
+\begin{DoxyCompactList}\small\item\em get the \mbox{\hyperlink{classPair}{Pair}} in a position selected, for consulting \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIndex_a734ad3d7b0f08e98616a9ec4207cae27}\label{classIndex_a734ad3d7b0f08e98616a9ec4207cae27}} 
+void \mbox{\hyperlink{classIndex_a734ad3d7b0f08e98616a9ec4207cae27}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the index, setting the number of entries to 0. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPair}{Pair}} \& \mbox{\hyperlink{classIndex_a4dd5e32738fa2130e60a42b2cb970499}{at}} (int pos)
+\begin{DoxyCompactList}\small\item\em get the \mbox{\hyperlink{classPair}{Pair}} in a position selected, for modification \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIndex_a4a5393a32896f664f2f3e78cf9982103}{lower\+\_\+bound}} (const std\+::string \&key) const
+\begin{DoxyCompactList}\small\item\em Returns the position to the first element in the \mbox{\hyperlink{classIndex}{Index}} which is not considered to go before key (i.\+e., either it is the first element equal to the key or it is strictly bigger), look at the example. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIndex_ae0a2965afa0cd0a99498b19c0c02a76f}{upper\+\_\+bound}} (const std\+::string \&key) const
+\begin{DoxyCompactList}\small\item\em Returns the position to the first element in the \mbox{\hyperlink{classIndex}{Index}} which is considered to go after the key look at the example. example\+: // 10 20 30 30 40 50 60 70 upper\+\_\+bound(30) ........$^\wedge$ upper\+\_\+bound(35) ........$^\wedge$. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIndex_aa9fb80238805162321140a1e12684594}{add}} (const \mbox{\hyperlink{classPair}{Pair}} \&pair)
+\begin{DoxyCompactList}\small\item\em Inserts a new entry in the index, in a way that the index remains in ascending order of searching key. procedure\+: use the method upper\+\_\+bound (see description) that provides the exact position where to insert. Once the position is found, the method has to make room by moving all the posterior records one position in the index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIndex_aeea7830632af653704db479f3a29f9a5}\label{classIndex_aeea7830632af653704db479f3a29f9a5}} 
+void \mbox{\hyperlink{classIndex_aeea7830632af653704db479f3a29f9a5}{print}} () const
+\begin{DoxyCompactList}\small\item\em Displays the information about the \mbox{\hyperlink{classIndex}{Index}} on screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIndex_a308675e8e969267bc2402a96d01816b2}\label{classIndex_a308675e8e969267bc2402a96d01816b2}} 
+std\+::string {\bfseries to\+\_\+string} () const
+\item 
+\mbox{\Hypertarget{classIndex_a5bb42666a31fe412df613b397d9e9b7b}\label{classIndex_a5bb42666a31fe412df613b397d9e9b7b}} 
+std\+::string {\bfseries report\+Data} () const
+\item 
+\mbox{\hyperlink{classIndex}{Index}} \& \mbox{\hyperlink{classIndex_a7f07befff13bb6563764b5162ddec638}{operator=}} (const \mbox{\hyperlink{classIndex}{Index}} \&one)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIndex_a0f3ab2b3c2f7c2304e2881204cfb7b42}\label{classIndex_a0f3ab2b3c2f7c2304e2881204cfb7b42}} 
+\index{Index@{Index}!Index@{Index}}
+\index{Index@{Index}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Index\+::\+Index (\begin{DoxyParamCaption}\item[{int}]{on\+Brand = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor defining the type of index to be created. Depending on the type, the values of the pairs will be set using users or brands. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type of the index
+\begin{DoxyItemize}
+\item Value 0 indicates an index over the users
+\item Value 1 indicates an index over the brands 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIndex_a193d79170a1effb5d401a627249e52d9}\label{classIndex_a193d79170a1effb5d401a627249e52d9}} 
+\index{Index@{Index}!Index@{Index}}
+\index{Index@{Index}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Index\+::\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIndex}{Index}} \&}]{orig }\end{DoxyParamCaption})}
+
+
+
+Copy constructor, a new object is created from the parameter object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em org} & the \mbox{\hyperlink{classIndex}{Index}} we want a copy from \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIndex_aa9fb80238805162321140a1e12684594}\label{classIndex_aa9fb80238805162321140a1e12684594}} 
+\index{Index@{Index}!add@{add}}
+\index{add@{add}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily int Index\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPair}{Pair}} \&}]{pair }\end{DoxyParamCaption})}
+
+
+
+Inserts a new entry in the index, in a way that the index remains in ascending order of searching key. procedure\+: use the method upper\+\_\+bound (see description) that provides the exact position where to insert. Once the position is found, the method has to make room by moving all the posterior records one position in the index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em an} & entry in the index. The name has to be correct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 when insertion is successful, 0 if it fails 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIndex_a4dd5e32738fa2130e60a42b2cb970499}\label{classIndex_a4dd5e32738fa2130e60a42b2cb970499}} 
+\index{Index@{Index}!at@{at}}
+\index{at@{at}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPair}{Pair}} \& Index\+::at (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+get the \mbox{\hyperlink{classPair}{Pair}} in a position selected, for modification 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos,position} & in the \mbox{\hyperlink{classIndex}{Index}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the selected \mbox{\hyperlink{classPair}{Pair}} in the \mbox{\hyperlink{classIndex}{Index}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIndex_a4b4100575cd7c41b532aaee42b27458a}\label{classIndex_a4b4100575cd7c41b532aaee42b27458a}} 
+\index{Index@{Index}!at@{at}}
+\index{at@{at}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classPair}{Pair}} \& Index\+::at (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+get the \mbox{\hyperlink{classPair}{Pair}} in a position selected, for consulting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos,position} & in the \mbox{\hyperlink{classIndex}{Index}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the selected \mbox{\hyperlink{classPair}{Pair}} in the \mbox{\hyperlink{classIndex}{Index}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIndex_a3b2c7f89af619efa0857084100fff2f8}\label{classIndex_a3b2c7f89af619efa0857084100fff2f8}} 
+\index{Index@{Index}!build@{build}}
+\index{build@{build}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily void Index\+::build (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEventSet}{Event\+Set}} \&}]{ev\+Set,  }\item[{int}]{on\+Brand }\end{DoxyParamCaption})}
+
+
+
+Build the index using the Brand o the user\+ID as searching key according to the on\+Brand value. 
+
+Build the index using the Brand o the user\+ID as searching key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ev\+Set} & origin \\
+\hline
+{\em on\+Brand} & if 1 then build an index by brand, otherwise by User\\
+\hline
+{\em ev\+Set} & origin \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIndex_a060c365a178c347c5f97ccc89688e672}\label{classIndex_a060c365a178c347c5f97ccc89688e672}} 
+\index{Index@{Index}!getIOnWhich@{getIOnWhich}}
+\index{getIOnWhich@{getIOnWhich}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{getIOnWhich()}{getIOnWhich()}}
+{\footnotesize\ttfamily int Index\+::get\+I\+On\+Which (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Informs on which field is mounted the index, 1 Brand 0 user\+ID. 
+
+\begin{DoxyReturn}{Returns}
+the number 0,1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIndex_a10fb1c71d064c2b3118d4a11a3adda05}\label{classIndex_a10fb1c71d064c2b3118d4a11a3adda05}} 
+\index{Index@{Index}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Index\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Detects whether an index is empty or not. 
+
+\begin{DoxyReturn}{Returns}
+true if the index has no elements, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIndex_a4a5393a32896f664f2f3e78cf9982103}\label{classIndex_a4a5393a32896f664f2f3e78cf9982103}} 
+\index{Index@{Index}!lower\_bound@{lower\_bound}}
+\index{lower\_bound@{lower\_bound}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{lower\_bound()}{lower\_bound()}}
+{\footnotesize\ttfamily int Index\+::lower\+\_\+bound (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Returns the position to the first element in the \mbox{\hyperlink{classIndex}{Index}} which is not considered to go before key (i.\+e., either it is the first element equal to the key or it is strictly bigger), look at the example. 
+
+Returns the position to the first element in the \mbox{\hyperlink{classIndex}{Index}} which is not considered to go before key (i.\+e., either it is equivalent is the first one or it goes after), look at the example.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the searching key a string example\+: // 10 20 30 30 40 50 60 70 low\+\_\+bound(30) ....$^\wedge$ low\+\_\+bound(35) ..........$^\wedge$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a position in the \mbox{\hyperlink{classIndex}{Index}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIndex_a7f07befff13bb6563764b5162ddec638}\label{classIndex_a7f07befff13bb6563764b5162ddec638}} 
+\index{Index@{Index}!operator=@{operator=}}
+\index{operator=@{operator=}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIndex}{Index}} \& Index\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIndex}{Index}} \&}]{one }\end{DoxyParamCaption})}
+
+Assignment operator overload. This operator copies the content of one \mbox{\hyperlink{classIndex}{Index}} into this. 
+\begin{DoxyParams}{Parameters}
+{\em one} & \mbox{\hyperlink{classIndex}{Index}} to be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to this, in order to chain the operator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIndex_a1d7170f9bdadd16f8db0b0905fdc1323}\label{classIndex_a1d7170f9bdadd16f8db0b0905fdc1323}} 
+\index{Index@{Index}!size@{size}}
+\index{size@{size}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Index\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the size of the index. 
+
+\begin{DoxyReturn}{Returns}
+int representing the size of the index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIndex_ae0a2965afa0cd0a99498b19c0c02a76f}\label{classIndex_ae0a2965afa0cd0a99498b19c0c02a76f}} 
+\index{Index@{Index}!upper\_bound@{upper\_bound}}
+\index{upper\_bound@{upper\_bound}!Index@{Index}}
+\doxysubsubsection{\texorpdfstring{upper\_bound()}{upper\_bound()}}
+{\footnotesize\ttfamily int Index\+::upper\+\_\+bound (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Returns the position to the first element in the \mbox{\hyperlink{classIndex}{Index}} which is considered to go after the key look at the example. example\+: // 10 20 30 30 40 50 60 70 upper\+\_\+bound(30) ........$^\wedge$ upper\+\_\+bound(35) ........$^\wedge$. 
+
+Returns the position to the first element in the \mbox{\hyperlink{classIndex}{Index}} which is considered to go after val. look at the example. example\+: // 10 20 30 30 40 50 60 70 upper\+\_\+bound(30) ........$^\wedge$ upper\+\_\+bound(35) ........$^\wedge$.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & String representing the searching key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a position in the \mbox{\hyperlink{classIndex}{Index}}
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the searching key a string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a position in the \mbox{\hyperlink{classIndex}{Index}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Index.\+h\item 
+src/Index.\+cpp\end{DoxyCompactItemize}

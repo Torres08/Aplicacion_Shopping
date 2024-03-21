@@ -1,0 +1,180 @@
+\hypertarget{classPair}{}\doxysection{Pair Class Reference}
+\label{classPair}\index{Pair@{Pair}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPair_af4048d0a7dfc586b82619107cf7f12e5}\label{classPair_af4048d0a7dfc586b82619107cf7f12e5}} 
+\mbox{\hyperlink{classPair_af4048d0a7dfc586b82619107cf7f12e5}{Pair}} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPair_ad3c545f637dd7bbcd23000a80c8ab38e}{Pair}} (const std\+::string \&key, int pos=-\/1)
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPair_a9d52f503e74ee00228769580d22bb12a}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em It detect invalid pairs. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classPair_a265336f9fccf8cfd441545158192e68c}{get\+Key}} () const
+\begin{DoxyCompactList}\small\item\em Get the key value from the \mbox{\hyperlink{classPair}{Pair}}. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classPair_ae792131d5d5d921c6ec972ee928e3f05}{get\+Pos}} () const
+\begin{DoxyCompactList}\small\item\em Get the position value from the \mbox{\hyperlink{classPair}{Pair}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPair_a50030329aed221d2942db296448f155a}{set\+Key}} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Set a key value for a \mbox{\hyperlink{classPair}{Pair}}. Check the validity of the key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPair_af20b1906372d2c140fa0a858baa7cfc8}{set\+Pos}} (int pos)
+\begin{DoxyCompactList}\small\item\em Set a value for entry in the \mbox{\hyperlink{classPair}{Pair}}. Check the validity of the position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPair_ac6f8ec02a32caeea7c9bd3923bcf6044}{set}} (const std\+::string \&key, int pos)
+\begin{DoxyCompactList}\small\item\em Set the key and position values for a \mbox{\hyperlink{classPair}{Pair}}. Check for the validity of the new values. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPair_a5d585945bacfe7f4a99d4966909e6e63}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Convert the content in a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPair_a757d2e7494c3c922d09da5b63653f737}{init\+Default}} ()
+\begin{DoxyCompactList}\small\item\em Set a \mbox{\hyperlink{classPair}{Pair}} to the default values, key to the default value given in an \mbox{\hyperlink{classEvent}{Event}}, and pos to a unknown position (-\/1) called by the default constructor and set when overruled integrity restriction. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPair_a6933af30ceafcac31d355554815f9363}{report\+Data}} () const
+\begin{DoxyCompactList}\small\item\em called by constructor \&\& and set overruling restriction \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPair_ad3c545f637dd7bbcd23000a80c8ab38e}\label{classPair_ad3c545f637dd7bbcd23000a80c8ab38e}} 
+\index{Pair@{Pair}!Pair@{Pair}}
+\index{Pair@{Pair}!Pair@{Pair}}
+\doxysubsubsection{\texorpdfstring{Pair()}{Pair()}}
+{\footnotesize\ttfamily Pair\+::\+Pair (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{int}]{pos = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Constructor with parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & value to be set \\
+\hline
+{\em int,position} & is set whenever is known, otherwise set to -\/1 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPair_a265336f9fccf8cfd441545158192e68c}\label{classPair_a265336f9fccf8cfd441545158192e68c}} 
+\index{Pair@{Pair}!getKey@{getKey}}
+\index{getKey@{getKey}!Pair@{Pair}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily const std\+::string \& Pair\+::get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the key value from the \mbox{\hyperlink{classPair}{Pair}}. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the string representing the key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPair_ae792131d5d5d921c6ec972ee928e3f05}\label{classPair_ae792131d5d5d921c6ec972ee928e3f05}} 
+\index{Pair@{Pair}!getPos@{getPos}}
+\index{getPos@{getPos}!Pair@{Pair}}
+\doxysubsubsection{\texorpdfstring{getPos()}{getPos()}}
+{\footnotesize\ttfamily const int Pair\+::get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the position value from the \mbox{\hyperlink{classPair}{Pair}}. 
+
+\begin{DoxyReturn}{Returns}
+int, a position in an array ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPair_a757d2e7494c3c922d09da5b63653f737}\label{classPair_a757d2e7494c3c922d09da5b63653f737}} 
+\index{Pair@{Pair}!initDefault@{initDefault}}
+\index{initDefault@{initDefault}!Pair@{Pair}}
+\doxysubsubsection{\texorpdfstring{initDefault()}{initDefault()}}
+{\footnotesize\ttfamily void Pair\+::init\+Default (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set a \mbox{\hyperlink{classPair}{Pair}} to the default values, key to the default value given in an \mbox{\hyperlink{classEvent}{Event}}, and pos to a unknown position (-\/1) called by the default constructor and set when overruled integrity restriction. 
+
+es util para la depuracion? P\+E\+RO necessary ? \mbox{\Hypertarget{classPair_a9d52f503e74ee00228769580d22bb12a}\label{classPair_a9d52f503e74ee00228769580d22bb12a}} 
+\index{Pair@{Pair}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Pair@{Pair}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Pair\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+It detect invalid pairs. 
+
+\begin{DoxyReturn}{Returns}
+It returns true when the pair contains E\+M\+P\+T\+Y\+\_\+\+F\+I\+E\+LD and -\/1, and returns false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPair_a6933af30ceafcac31d355554815f9363}\label{classPair_a6933af30ceafcac31d355554815f9363}} 
+\index{Pair@{Pair}!reportData@{reportData}}
+\index{reportData@{reportData}!Pair@{Pair}}
+\doxysubsubsection{\texorpdfstring{reportData()}{reportData()}}
+{\footnotesize\ttfamily std\+::string Pair\+::report\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+called by constructor \&\& and set overruling restriction 
+
+Sereializes the class and encodes it \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPair_ac6f8ec02a32caeea7c9bd3923bcf6044}\label{classPair_ac6f8ec02a32caeea7c9bd3923bcf6044}} 
+\index{Pair@{Pair}!set@{set}}
+\index{set@{set}!Pair@{Pair}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Pair\+::set (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Set the key and position values for a \mbox{\hyperlink{classPair}{Pair}}. Check for the validity of the new values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & to be assigned \\
+\hline
+{\em int,the} & position to be set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPair_a50030329aed221d2942db296448f155a}\label{classPair_a50030329aed221d2942db296448f155a}} 
+\index{Pair@{Pair}!setKey@{setKey}}
+\index{setKey@{setKey}!Pair@{Pair}}
+\doxysubsubsection{\texorpdfstring{setKey()}{setKey()}}
+{\footnotesize\ttfamily void Pair\+::set\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Set a key value for a \mbox{\hyperlink{classPair}{Pair}}. Check the validity of the key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & to be assigned \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPair_af20b1906372d2c140fa0a858baa7cfc8}\label{classPair_af20b1906372d2c140fa0a858baa7cfc8}} 
+\index{Pair@{Pair}!setPos@{setPos}}
+\index{setPos@{setPos}!Pair@{Pair}}
+\doxysubsubsection{\texorpdfstring{setPos()}{setPos()}}
+{\footnotesize\ttfamily void Pair\+::set\+Pos (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Set a value for entry in the \mbox{\hyperlink{classPair}{Pair}}. Check the validity of the position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int,the} & position to be set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPair_a5d585945bacfe7f4a99d4966909e6e63}\label{classPair_a5d585945bacfe7f4a99d4966909e6e63}} 
+\index{Pair@{Pair}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!Pair@{Pair}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily std\+::string Pair\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Convert the content in a string. 
+
+\begin{DoxyReturn}{Returns}
+string in format key space position 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Pair.\+h\item 
+src/Pair.\+cpp\end{DoxyCompactItemize}

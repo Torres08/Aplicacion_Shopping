@@ -1,0 +1,95 @@
+\hypertarget{DateTime_8cpp}{}\doxysection{src/\+Date\+Time.cpp File Reference}
+\label{DateTime_8cpp}\index{src/DateTime.cpp@{src/DateTime.cpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}Date\+Time.\+h\char`\"{}}\newline
+Include dependency graph for Date\+Time.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{DateTime_8cpp_a9962ec9b30855e08347df66f3fc99345}{is\+Correct}} (int year, int month, int day, int hour, int min, int sec)
+\begin{DoxyCompactList}\small\item\em auxiliar function to check if the date and the time are in correct format, taking into account, leap year etc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{DateTime_8cpp_af2b9a13e863e39a34e807bef47cbbd16}{split}} (const std\+::string \&line, int \&y, int \&m, int \&d, int \&h, int \&mn, int \&s)
+\begin{DoxyCompactList}\small\item\em split the first field in 6 components of the data time. Please consider using string\+::substr(int, int)\mbox{[}\href{https://en.cppreference.com/w/cpp/string/basic_string/substr}{\texttt{ https\+://en.\+cppreference.\+com/w/cpp/string/basic\+\_\+string/substr}}\mbox{]} to cut the line into the appropriate substrings and then convert it into integer values with the function stoi(string) \mbox{[}\href{https://en.cppreference.com/w/cpp/string/basic_string/stol}{\texttt{ https\+://en.\+cppreference.\+com/w/cpp/string/basic\+\_\+string/stol}}\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+M\+P-\/\+Team D\+E\+C\+S\+AI 
+\end{DoxyAuthor}
+\begin{DoxyNote}{Note}
+To be implemented by students 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{DateTime_8cpp_a9962ec9b30855e08347df66f3fc99345}\label{DateTime_8cpp_a9962ec9b30855e08347df66f3fc99345}} 
+\index{DateTime.cpp@{DateTime.cpp}!isCorrect@{isCorrect}}
+\index{isCorrect@{isCorrect}!DateTime.cpp@{DateTime.cpp}}
+\doxysubsubsection{\texorpdfstring{isCorrect()}{isCorrect()}}
+{\footnotesize\ttfamily bool is\+Correct (\begin{DoxyParamCaption}\item[{int}]{year,  }\item[{int}]{month,  }\item[{int}]{day,  }\item[{int}]{hour,  }\item[{int}]{min,  }\item[{int}]{sec }\end{DoxyParamCaption})}
+
+
+
+auxiliar function to check if the date and the time are in correct format, taking into account, leap year etc. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & input \\
+\hline
+{\em month} & input \\
+\hline
+{\em day} & input \\
+\hline
+{\em hour} & input \\
+\hline
+{\em min} & input \\
+\hline
+{\em sec} & input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if is correct, else return false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{DateTime_8cpp_af2b9a13e863e39a34e807bef47cbbd16}\label{DateTime_8cpp_af2b9a13e863e39a34e807bef47cbbd16}} 
+\index{DateTime.cpp@{DateTime.cpp}!split@{split}}
+\index{split@{split}!DateTime.cpp@{DateTime.cpp}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily void split (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line,  }\item[{int \&}]{y,  }\item[{int \&}]{m,  }\item[{int \&}]{d,  }\item[{int \&}]{h,  }\item[{int \&}]{mn,  }\item[{int \&}]{s }\end{DoxyParamCaption})}
+
+
+
+split the first field in 6 components of the data time. Please consider using string\+::substr(int, int)\mbox{[}\href{https://en.cppreference.com/w/cpp/string/basic_string/substr}{\texttt{ https\+://en.\+cppreference.\+com/w/cpp/string/basic\+\_\+string/substr}}\mbox{]} to cut the line into the appropriate substrings and then convert it into integer values with the function stoi(string) \mbox{[}\href{https://en.cppreference.com/w/cpp/string/basic_string/stol}{\texttt{ https\+://en.\+cppreference.\+com/w/cpp/string/basic\+\_\+string/stol}}\mbox{]} 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{YYYY-\/MM-\/dd hh:mm:ss UTC }
+\DoxyCodeLine{+-\/-\/-\/-\/+-\/-\/-\/-\/+-\/-\/-\/-\/+-\/-\/-\/-\/+-\/-\/-\/-\/+ }
+\DoxyCodeLine{|    |    |    |    |    |}
+\DoxyCodeLine{0    5    10   15   20   25}
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em line} & input string \\
+\hline
+{\em y} & output int \\
+\hline
+{\em m} & output int \\
+\hline
+{\em d} & output int \\
+\hline
+{\em h} & output int \\
+\hline
+{\em mn} & output int \\
+\hline
+{\em s} & output int \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}

@@ -1,0 +1,251 @@
+\hypertarget{classDateTime}{}\doxysection{Date\+Time Class Reference}
+\label{classDateTime}\index{DateTime@{DateTime}}
+
+
+Used to represent dates and times in the format Y\+Y\+Y\+Y-\/\+M\+M-\/dd hh\+:mm\+:\+:ss, where.  
+
+
+
+
+{\ttfamily \#include $<$Date\+Time.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDateTime_a3ccfb87f7a2e9683b91964e32d907161}\label{classDateTime_a3ccfb87f7a2e9683b91964e32d907161}} 
+\mbox{\hyperlink{classDateTime_a3ccfb87f7a2e9683b91964e32d907161}{Date\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Base constructor. It sets the default date. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDateTime_a9d53f245d45030f1f94d8a301dc75008}{Date\+Time}} (const std\+::string \&date)
+\begin{DoxyCompactList}\small\item\em Constructor with arguments. If the string is a valid date and time, it is sets, otherwise it sets to the default \mbox{\hyperlink{classDateTime}{Date\+Time}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDateTime_af0eb582fdc2b0964ecf255df53396712}{year}} () const
+\begin{DoxyCompactList}\small\item\em It gives the year. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDateTime_a294643a8ce6bd0cca6cda71890e7456c}{month}} () const
+\begin{DoxyCompactList}\small\item\em It gives the month. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDateTime_a2d1b93811c0d81597963162b726d26f3}{day}} () const
+\begin{DoxyCompactList}\small\item\em It gives the day. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDateTime_a042f8d8eac63eee6b8059ec2df41be93}{hour}} () const
+\begin{DoxyCompactList}\small\item\em It gives the hour. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDateTime_ab1632b886ff734092729f844b39958c9}{min}} () const
+\begin{DoxyCompactList}\small\item\em It gives the minutes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDateTime_a37f20f7430da224a0c08a9cbca1c1d7d}{sec}} () const
+\begin{DoxyCompactList}\small\item\em It gives the number of seconds. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDateTime_a1a27664ae0a3025fe99343ca57b28873}{set}} (const std\+::string \&line)
+\begin{DoxyCompactList}\small\item\em set the data\+Time if is correct, as well as in date, as in time \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classDateTime_a246ab4f7cd93e15135efb69363d97d83}{to\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em transform a data\+Time to a string following the format\+: 2019-\/10-\/01 00\+:15\+:06 U\+TC \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDateTime_ae519b679df0449166adf57267d89142f}{is\+Before}} (const \mbox{\hyperlink{classDateTime}{Date\+Time}} \&one) const
+\begin{DoxyCompactList}\small\item\em check if the referenced object is before in time than the data\+Time one \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDateTime_ab29a27908ce1e547fe907dc23e5bbe62}{same\+Day}} (const \mbox{\hyperlink{classDateTime}{Date\+Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Check if the referenced object and the argument belong to the same day. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDateTime_a9c75b71d29094fde37d36f86c10b934b}{week\+Day}} () const
+\begin{DoxyCompactList}\small\item\em Computes the week day, from date of the data\+Time. According to the Zeller\textquotesingle{}s congruence look at wikipedia \href{https://en.wikipedia.org/wiki/Zeller\%27s_congruence}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Zeller\%27s\+\_\+congruence}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used to represent dates and times in the format Y\+Y\+Y\+Y-\/\+M\+M-\/dd hh\+:mm\+:\+:ss, where. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{YYYY-\/MM-\/dd hh:mm:ss UTC }
+\DoxyCodeLine{+-\/-\/-\/-\/+-\/-\/-\/-\/+-\/-\/-\/-\/+-\/-\/-\/-\/+-\/-\/-\/-\/+ }
+\DoxyCodeLine{|    |    |    |    |    |}
+\DoxyCodeLine{0    5    10   15   20   25}
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Y\+Y\+YY Year Any value allowed
+\item MM Month values in \mbox{[}1, 12\mbox{]}
+\item dd day values depending on the calendar
+\item hh hour values in \mbox{[}0,23\mbox{]}
+\item mm minute values in \mbox{[}0,59\mbox{]}
+\item ss seconds values in \mbox{[}0, 59\mbox{]} 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDateTime_a9d53f245d45030f1f94d8a301dc75008}\label{classDateTime_a9d53f245d45030f1f94d8a301dc75008}} 
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}}
+{\footnotesize\ttfamily Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{date }\end{DoxyParamCaption})}
+
+
+
+Constructor with arguments. If the string is a valid date and time, it is sets, otherwise it sets to the default \mbox{\hyperlink{classDateTime}{Date\+Time}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & The striing containig the date and time \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDateTime_a2d1b93811c0d81597963162b726d26f3}\label{classDateTime_a2d1b93811c0d81597963162b726d26f3}} 
+\index{DateTime@{DateTime}!day@{day}}
+\index{day@{day}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{day()}{day()}}
+{\footnotesize\ttfamily int Date\+Time\+::day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+It gives the day. 
+
+\begin{DoxyReturn}{Returns}
+The day of the date within its valid bounds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDateTime_a042f8d8eac63eee6b8059ec2df41be93}\label{classDateTime_a042f8d8eac63eee6b8059ec2df41be93}} 
+\index{DateTime@{DateTime}!hour@{hour}}
+\index{hour@{hour}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{hour()}{hour()}}
+{\footnotesize\ttfamily int Date\+Time\+::hour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+It gives the hour. 
+
+\begin{DoxyReturn}{Returns}
+The hour of the date within its valid bounds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDateTime_ae519b679df0449166adf57267d89142f}\label{classDateTime_ae519b679df0449166adf57267d89142f}} 
+\index{DateTime@{DateTime}!isBefore@{isBefore}}
+\index{isBefore@{isBefore}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{isBefore()}{isBefore()}}
+{\footnotesize\ttfamily bool Date\+Time\+::is\+Before (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDateTime}{Date\+Time}} \&}]{one }\end{DoxyParamCaption}) const}
+
+
+
+check if the referenced object is before in time than the data\+Time one 
+
+
+\begin{DoxyParams}{Parameters}
+{\em one} & a data\+Time to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when the \mbox{\hyperlink{classDateTime}{Date\+Time}} string of this object is lexycographically before that the one given as argument 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDateTime_ab1632b886ff734092729f844b39958c9}\label{classDateTime_ab1632b886ff734092729f844b39958c9}} 
+\index{DateTime@{DateTime}!min@{min}}
+\index{min@{min}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily int Date\+Time\+::min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+It gives the minutes. 
+
+\begin{DoxyReturn}{Returns}
+The number of minutes of the date within its valid bounds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDateTime_a294643a8ce6bd0cca6cda71890e7456c}\label{classDateTime_a294643a8ce6bd0cca6cda71890e7456c}} 
+\index{DateTime@{DateTime}!month@{month}}
+\index{month@{month}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{month()}{month()}}
+{\footnotesize\ttfamily int Date\+Time\+::month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+It gives the month. 
+
+\begin{DoxyReturn}{Returns}
+The month of the date within its valid bounds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDateTime_ab29a27908ce1e547fe907dc23e5bbe62}\label{classDateTime_ab29a27908ce1e547fe907dc23e5bbe62}} 
+\index{DateTime@{DateTime}!sameDay@{sameDay}}
+\index{sameDay@{sameDay}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{sameDay()}{sameDay()}}
+{\footnotesize\ttfamily bool Date\+Time\+::same\+Day (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDateTime}{Date\+Time}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Check if the referenced object and the argument belong to the same day. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{classDateTime}{Date\+Time}} to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both Date\+Times are from the same day, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDateTime_a37f20f7430da224a0c08a9cbca1c1d7d}\label{classDateTime_a37f20f7430da224a0c08a9cbca1c1d7d}} 
+\index{DateTime@{DateTime}!sec@{sec}}
+\index{sec@{sec}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{sec()}{sec()}}
+{\footnotesize\ttfamily int Date\+Time\+::sec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+It gives the number of seconds. 
+
+\begin{DoxyReturn}{Returns}
+The seconds of the date within its valid bounds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDateTime_a1a27664ae0a3025fe99343ca57b28873}\label{classDateTime_a1a27664ae0a3025fe99343ca57b28873}} 
+\index{DateTime@{DateTime}!set@{set}}
+\index{set@{set}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Date\+Time\+::set (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{line }\end{DoxyParamCaption})}
+
+
+
+set the data\+Time if is correct, as well as in date, as in time 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & is the string given from the csv format 2019-\/10-\/01 00\+:15\+:06 U\+TC \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The tail \char`\"{} U\+T\+C\char`\"{} must be ignored 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classDateTime_a246ab4f7cd93e15135efb69363d97d83}\label{classDateTime_a246ab4f7cd93e15135efb69363d97d83}} 
+\index{DateTime@{DateTime}!to\_string@{to\_string}}
+\index{to\_string@{to\_string}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{to\_string()}{to\_string()}}
+{\footnotesize\ttfamily string Date\+Time\+::to\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+transform a data\+Time to a string following the format\+: 2019-\/10-\/01 00\+:15\+:06 U\+TC 
+
+\begin{DoxyAuthor}{Author}
+D\+E\+C\+S\+AI 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+string that contains data\+Time and including the tailing U\+TC 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDateTime_a9c75b71d29094fde37d36f86c10b934b}\label{classDateTime_a9c75b71d29094fde37d36f86c10b934b}} 
+\index{DateTime@{DateTime}!weekDay@{weekDay}}
+\index{weekDay@{weekDay}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{weekDay()}{weekDay()}}
+{\footnotesize\ttfamily int Date\+Time\+::week\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Computes the week day, from date of the data\+Time. According to the Zeller\textquotesingle{}s congruence look at wikipedia \href{https://en.wikipedia.org/wiki/Zeller\%27s_congruence}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Zeller\%27s\+\_\+congruence}}. 
+
+\begin{DoxyReturn}{Returns}
+values in the range 0..6, where 0 is sunday 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDateTime_af0eb582fdc2b0964ecf255df53396712}\label{classDateTime_af0eb582fdc2b0964ecf255df53396712}} 
+\index{DateTime@{DateTime}!year@{year}}
+\index{year@{year}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{year()}{year()}}
+{\footnotesize\ttfamily int Date\+Time\+::year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+It gives the year. 
+
+\begin{DoxyReturn}{Returns}
+The year of the date as an integer value 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{DateTime_8h}{Date\+Time.\+h}}\item 
+src/\mbox{\hyperlink{DateTime_8cpp}{Date\+Time.\+cpp}}\end{DoxyCompactItemize}

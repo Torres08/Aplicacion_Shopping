@@ -1,0 +1,106 @@
+\hypertarget{EventSet_8h}{}\doxysection{include/\+Event\+Set.h File Reference}
+\label{EventSet_8h}\index{include/EventSet.h@{include/EventSet.h}}
+{\ttfamily \#include \char`\"{}Date\+Time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Event.\+h\char`\"{}}\newline
+Include dependency graph for Event\+Set.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classEventSet}{Event\+Set}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{EventSet_8h_a2a50d99dc5d43eb57bdcb2c4c29bc76e}\label{EventSet_8h_a2a50d99dc5d43eb57bdcb2c4c29bc76e}} 
+\#define {\bfseries M\+A\+X\+E\+V\+E\+NT}~500
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{EventSet_8h_abe71e09d60b5cec46d638d14d9350135}{sum\+Price}} (const \mbox{\hyperlink{classEventSet}{Event\+Set}} \&ev\+Set)
+\begin{DoxyCompactList}\small\item\em It Computes the total sum for price, on the complete \mbox{\hyperlink{classEventSet}{Event\+Set}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{EventSet_8h_a791b97200f877bd1c151572877ee5891}{find\+Unique}} (const \mbox{\hyperlink{classEventSet}{Event\+Set}} \&es, const std\+::string \&field, std\+::string values\mbox{[}$\,$\mbox{]}, int \&n\+\_\+values)
+\begin{DoxyCompactList}\small\item\em It explores all the \mbox{\hyperlink{classEventSet}{Event\+Set}} and builds a string\mbox{[}\mbox{]} composed of all different values taken by the field {\itshape field}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEventSet}{Event\+Set}} \mbox{\hyperlink{EventSet_8h_ad8fd6256f4d913aabdfa023926874cb3}{raw\+Filter\+Events}} (const \mbox{\hyperlink{classEventSet}{Event\+Set}} \&es, const std\+::string \&field, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Extract a subset of the \mbox{\hyperlink{classEventSet}{Event\+Set}} composed only of those events in which the given {\itshape field} matches the given {\itshape value}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{EventSet_8h_afe9c596c081a7b8686b57d8bdadb3bb4}\label{EventSet_8h_afe9c596c081a7b8686b57d8bdadb3bb4}} 
+\mbox{\hyperlink{classEvent}{Event}} {\bfseries N\+U\+L\+L\+\_\+\+E\+V\+E\+NT}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+M\+P-\/\+Team D\+E\+C\+S\+AI 
+\end{DoxyAuthor}
+\begin{DoxyNote}{Note}
+To be implemented by students 
+\end{DoxyNote}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{EventSet_8h_a791b97200f877bd1c151572877ee5891}\label{EventSet_8h_a791b97200f877bd1c151572877ee5891}} 
+\index{EventSet.h@{EventSet.h}!findUnique@{findUnique}}
+\index{findUnique@{findUnique}!EventSet.h@{EventSet.h}}
+\doxysubsubsection{\texorpdfstring{findUnique()}{findUnique()}}
+{\footnotesize\ttfamily void find\+Unique (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEventSet}{Event\+Set}} \&}]{es,  }\item[{const std\+::string \&}]{field,  }\item[{std\+::string}]{values\mbox{[}$\,$\mbox{]},  }\item[{int \&}]{n\+\_\+values }\end{DoxyParamCaption})}
+
+
+
+It explores all the \mbox{\hyperlink{classEventSet}{Event\+Set}} and builds a string\mbox{[}\mbox{]} composed of all different values taken by the field {\itshape field}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The field of the event \\
+\hline
+{\em values} & Array of values (as string) which is made up of all different values of the field {\itshape field} \\
+\hline
+{\em n\+\_\+values} & Number of different values found \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{EventSet_8h_ad8fd6256f4d913aabdfa023926874cb3}\label{EventSet_8h_ad8fd6256f4d913aabdfa023926874cb3}} 
+\index{EventSet.h@{EventSet.h}!rawFilterEvents@{rawFilterEvents}}
+\index{rawFilterEvents@{rawFilterEvents}!EventSet.h@{EventSet.h}}
+\doxysubsubsection{\texorpdfstring{rawFilterEvents()}{rawFilterEvents()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEventSet}{Event\+Set}} raw\+Filter\+Events (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEventSet}{Event\+Set}} \&}]{es,  }\item[{const std\+::string \&}]{field,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Extract a subset of the \mbox{\hyperlink{classEventSet}{Event\+Set}} composed only of those events in which the given {\itshape field} matches the given {\itshape value}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & The name of the field of the event. According to \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{Event_8h}{Event.\+h}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value of the field that will be used to partition the \mbox{\hyperlink{classEventSet}{Event\+Set}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{classEventSet}{Event\+Set}} which is a subset of the current one in which all events have {\itshape field} == {\itshape value} 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]\end{DoxyRefDesc}
+\mbox{\Hypertarget{EventSet_8h_abe71e09d60b5cec46d638d14d9350135}\label{EventSet_8h_abe71e09d60b5cec46d638d14d9350135}} 
+\index{EventSet.h@{EventSet.h}!sumPrice@{sumPrice}}
+\index{sumPrice@{sumPrice}!EventSet.h@{EventSet.h}}
+\doxysubsubsection{\texorpdfstring{sumPrice()}{sumPrice()}}
+{\footnotesize\ttfamily float sum\+Price (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEventSet}{Event\+Set}} \&}]{ev\+Set }\end{DoxyParamCaption})}
+
+
+
+It Computes the total sum for price, on the complete \mbox{\hyperlink{classEventSet}{Event\+Set}}. 
+
+\begin{DoxyReturn}{Returns}
+the total computed 
+\end{DoxyReturn}
